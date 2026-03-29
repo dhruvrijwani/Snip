@@ -314,7 +314,7 @@
         border-color: var(--brown);
       }
       .card-num {
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 700;
         letter-spacing: 0.2em;
         color: var(--gold);
@@ -401,6 +401,12 @@
         text-align: center;
         padding: 40px;
       }
+
+        .director-name {
+        background: linear-gradient(135deg, #C5A46D, #FFD700, #B8963A);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
       .director-visual svg {
         opacity: 0.3;
       }
@@ -934,7 +940,7 @@
         flex-wrap: wrap;
       }
       .footer-logo-img {
-        height: 80px;
+        height: 120px;
         width: auto;
         object-fit: contain;
       }
@@ -1208,7 +1214,7 @@
     <div style="background: var(--cream); padding: 40px 32px;">
     <div style="max-width: 1140px; margin: 0 auto; border-left: 3px solid var(--brown); padding-left: 28px;">
         <p style="font-family: var(--font); font-size: 16px; color: var(--mid); line-height: 1.8; max-width: 760px;">
-        Join the 6-Month Professional/ Foundation Hair Dresser Program at Snip Academy of Hair & Makeup. Led by Anjali Noronha, an accomplished and highly respected professional in the hair and makeup industry.
+        Join the 6-Month Professional Hair Dresser Program at Snip Academy of Hair & Makeup. Led by Anjali Noronha, an accomplished and highly respected professional in the hair and makeup industry.
         </p>
         <p style="font-family: var(--font); font-size: 16px; color: var(--mid); line-height: 1.8; max-width: 760px; margin-top: 12px;">
         This course takes you from a beginner to a working professional with 3 months of training and a guaranteed 3-month internship at Snip, Goa.
@@ -1279,11 +1285,11 @@
       <div class="container">
         <div class="director-grid">
           <div class="director-visual">
-            <img src="assests/anjali.png" alt="Anjali Noronha" class="director-img">
+            <img src="assests/anjali2.png" alt="Anjali Noronha" class="director-img">
           </div>
           <div>
             <p class="director-label">Course Director</p>
-            <h2>Anjali Noronha</h2>
+            <h2 class="director-name">Anjali Noronha</h2>
             <p>
               Anjali brings over 25 years of industry expertise to the academy.
               Her vast training background includes some of the world's most
@@ -1453,7 +1459,7 @@
         <div class="details-grid">
           <div class="detail-card">
             <div class="detail-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
             <defs>
                 <linearGradient id="gold1" x1="0" y1="0" x2="24" y2="24">
                 <stop offset="0%" stop-color="#C5A46D"/>
@@ -1472,7 +1478,7 @@
           <div class="detail-card">
             <div class="detail-icon">
             <!-- 2. Clock -->
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <svg width="30" height="30" fill="none" viewBox="0 0 24 24">
             <defs>
                 <linearGradient id="gold2" x1="0" y1="0" x2="24" y2="24">
                 <stop offset="0%" stop-color="#C5A46D"/>
@@ -1490,17 +1496,22 @@
           </div>
           <div class="detail-card">
             <div class="detail-icon">
-            <!-- 3. Card -->
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <!-- Payment Icon -->
+            <svg width="30" height="30" fill="none" viewBox="0 0 24 24">
             <defs>
-                <linearGradient id="gold3" x1="0" y1="0" x2="24" y2="24">
+                <linearGradient id="goldPayment" x1="0" y1="0" x2="24" y2="24">
                 <stop offset="0%" stop-color="#C5A46D"/>
                 <stop offset="50%" stop-color="#FFD700"/>
                 <stop offset="100%" stop-color="#B8963A"/>
                 </linearGradient>
             </defs>
-            <rect x="2" y="5" width="20" height="14" rx="2" stroke="url(#gold3)" stroke-width="2"/>
-            <path d="M2 10H22" stroke="url(#gold3)" stroke-width="2"/>
+
+            <!-- Card -->
+            <rect x="2" y="6" width="20" height="12" rx="2" stroke="url(#goldPayment)" stroke-width="2"/>
+            <path d="M2 10H22" stroke="url(#goldPayment)" stroke-width="2"/>
+
+            <!-- Rupee Symbol -->
+            <path d="M8 12H14M8 9H16M10 12C10 14 12 15 14 16" stroke="url(#goldPayment)" stroke-width="2" stroke-linecap="round"/>
             </svg>
 
             </div>
@@ -1512,17 +1523,22 @@
           </div>
           <div class="detail-card">
             <div class="detail-icon">
-            <!-- 3. Card -->
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <!-- Payment Icon -->
+            <svg width="30" height="30" fill="none" viewBox="0 0 24 24">
             <defs>
-                <linearGradient id="gold3" x1="0" y1="0" x2="24" y2="24">
+                <linearGradient id="goldPayment" x1="0" y1="0" x2="24" y2="24">
                 <stop offset="0%" stop-color="#C5A46D"/>
                 <stop offset="50%" stop-color="#FFD700"/>
                 <stop offset="100%" stop-color="#B8963A"/>
                 </linearGradient>
             </defs>
-            <rect x="2" y="5" width="20" height="14" rx="2" stroke="url(#gold3)" stroke-width="2"/>
-            <path d="M2 10H22" stroke="url(#gold3)" stroke-width="2"/>
+
+            <!-- Card -->
+            <rect x="2" y="6" width="20" height="12" rx="2" stroke="url(#goldPayment)" stroke-width="2"/>
+            <path d="M2 10H22" stroke="url(#goldPayment)" stroke-width="2"/>
+
+            <!-- Rupee Symbol -->
+            <path d="M8 12H14M8 9H16M10 12C10 14 12 15 14 16" stroke="url(#goldPayment)" stroke-width="2" stroke-linecap="round"/>
             </svg>
             </div>
             <div class="detail-label">Payment</div>
@@ -1533,7 +1549,7 @@
           <div class="detail-card">
             <div class="detail-icon">
             <!-- 5. Check / Requirement -->
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <svg width="30" height="30" fill="none" viewBox="0 0 24 24">
             <defs>
                 <linearGradient id="gold5" x1="0" y1="0" x2="24" y2="24">
                 <stop offset="0%" stop-color="#C5A46D"/>
@@ -1553,7 +1569,7 @@
           <div class="detail-card">
             <div class="detail-icon">
             <!-- 6. Graduation -->
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <svg width="30" height="30" fill="none" viewBox="0 0 24 24">
             <defs>
                 <linearGradient id="gold6" x1="0" y1="0" x2="24" y2="24">
                 <stop offset="0%" stop-color="#C5A46D"/>
