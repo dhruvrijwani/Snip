@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snip Academy of Hair & Makeup</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <style>
       /* ─── TOKENS ─────────────────────────────────────────── */
       :root {
@@ -19,83 +17,127 @@
         --border: #e0d8cf;
         --section-gap: 100px;
         --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --nav-h: 64px;
       }
 
-      /* ─── RESET ──────────────────────────────────────────── */
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
       html { scroll-behavior: smooth; }
       body { font-family: var(--font); background: var(--cream); color: var(--charcoal); line-height: 1.6; -webkit-font-smoothing: antialiased; }
       img { display: block; max-width: 100%; }
       a { text-decoration: none; color: inherit; }
 
-      /* ─── UTILITY ────────────────────────────────────────── */
       .container { max-width: 1140px; margin: 0 auto; padding: 0 32px; }
       .section-label { font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--mid); margin-bottom: 16px; }
 
       /* ─── NAV ────────────────────────────────────────────── */
-      nav { position: fixed; top: 0; left: 0; width: 100%; z-index: 100; background: rgba(245,240,234,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
-      nav .inner { max-width: 1140px; margin: 0 auto; padding: 0 32px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
-      .nav-logo { font-size: 18px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
-      .nav-logo span { display: block; font-size: 8px; font-weight: 400; letter-spacing: .25em; color: var(--mid); margin-top: 2px; }
-      .nav-cta { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; background: var(--brown); color: #fff; border: none; cursor: pointer; padding: 10px 24px; border-radius: 2px; transition: background .2s; }
+      nav {
+        position: fixed; top: 0; left: 0; width: 100%; z-index: 200;
+        background: rgba(245,240,234,.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+      }
+      nav .inner {
+        max-width: 1140px; margin: 0 auto; padding: 0 32px;
+        height: var(--nav-h); display: flex; align-items: center; justify-content: space-between;
+      }
+      /* Logo image in nav */
+      .nav-logo-img {
+        height: 80px; width: auto; display: block;
+        object-fit: contain;
+      }
+      .nav-logo-placeholder {
+        height: 40px; display: flex; align-items: center;
+        background: var(--border); border-radius: 2px; padding: 0 12px;
+        font-size: 11px; color: var(--mid); letter-spacing: .08em;
+        white-space: nowrap;
+      }
+      .nav-cta {
+        font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+        background: var(--brown); color: #fff; border: none; cursor: pointer;
+        padding: 10px 24px; border-radius: 2px; transition: background .2s; flex-shrink: 0;
+      }
       .nav-cta:hover { background: var(--brown-dk); }
 
-      /* ─── HERO ───────────────────────────────────────────── */
-      .hero {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        padding-top: 64px;
+      /* ─── HERO BANNER ────────────────────────────────────── */
+      .hero-banner {
         position: relative;
+        margin-top: var(--nav-h);
+        width: 100%;
         overflow: hidden;
+        background: var(--cream);
       }
-      /* Decorative rings — right side */
-      .hero-ring-1 {
-        position: absolute; right: 8%; top: 50%; transform: translateY(-50%);
-        width: 500px; height: 500px; border-radius: 50%;
-        border: 1px solid rgba(140,90,60,.1);
-        pointer-events: none;
+      .hero-banner-img {
+        width: 100%;
+        display: block;
+        max-height: 90vh;
+        object-fit: cover;
+        object-position: center top;
       }
-      .hero-ring-2 {
-        position: absolute; right: 14%; top: 50%; transform: translateY(-50%);
-        width: 280px; height: 280px; border-radius: 50%;
-        border: 1px solid rgba(140,90,60,.08);
-        pointer-events: none;
+      /* Overlay with CTA — sits over the image */
+      .hero-banner-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 48px 64px;
+        background: linear-gradient(
+          to top,
+          rgba(28,26,24,.55) 0%,
+          rgba(28,26,24,.15) 40%,
+          transparent 70%
+        );
       }
-      .hero-glow {
-        position: absolute; right: 5%; top: 50%; transform: translateY(-50%);
-        width: 600px; height: 600px; border-radius: 50%;
-        background: radial-gradient(circle, rgba(140,90,60,.05) 0%, transparent 65%);
-        pointer-events: none;
+      .hero-banner-content {
+        max-width: 560px;
       }
-
-      .hero-left {
-        display: flex; flex-direction: column; justify-content: center;
-        padding: 100px 32px;
-        max-width: 820px;
-        position: relative; z-index: 1;
+      .hero-banner-eyebrow {
+        font-size: 10px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase;
+        color: rgba(255,255,255,.8); margin-bottom: 16px;
+        display: flex; align-items: center; gap: 10px;
       }
-      .hero-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--brown); margin-bottom: 28px; display: flex; align-items: center; gap: 12px; }
-      .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--brown); }
-      .hero h1 { font-size: clamp(52px, 7vw, 96px); font-weight: 800; line-height: 1.02; letter-spacing: -.03em; color: var(--charcoal); margin-bottom: 16px; }
-      .hero h1 em { font-style: normal; color: var(--brown); }
-      .hero-sub { font-size: 16px; color: var(--mid); line-height: 1.75; margin-bottom: 14px; max-width: 620px; }
-      .hero-badges { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 28px; margin-bottom: 44px; }
-      .badge { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 500; color: var(--charcoal); background: var(--white); border: 1px solid var(--border); padding: 8px 16px; border-radius: 100px; }
-      .badge svg { color: var(--brown); flex-shrink: 0; }
-      .hero-actions { display: flex; align-items: center; gap: 24px; }
-      .btn-primary { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; background: var(--brown); color: #fff; border: none; cursor: pointer; padding: 16px 36px; border-radius: 2px; transition: background .2s, transform .15s; }
-      .btn-primary:hover { background: var(--brown-dk); transform: translateY(-1px); }
+      .hero-banner-eyebrow::before { content: ''; width: 28px; height: 1px; background: rgba(255,255,255,.6); }
+      .hero-banner-title {
+        font-size: clamp(28px, 3.5vw, 52px);
+        font-weight: 800; line-height: 1.08; letter-spacing: -.02em;
+        color: #fff; margin-bottom: 24px;
+      }
+      .hero-banner-title em { font-style: normal; color: var(--gold); }
+      .hero-banner-badges {
+        display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px;
+      }
+      .hero-badge {
+        display: flex; align-items: center; gap: 7px;
+        font-size: 11px; font-weight: 600;
+        color: #fff;
+        background: rgba(255,255,255,.12);
+        border: 1px solid rgba(255,255,255,.25);
+        backdrop-filter: blur(6px);
+        padding: 7px 14px; border-radius: 100px;
+      }
+      .hero-badge svg { color: var(--gold); flex-shrink: 0; }
+      .hero-banner-actions { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+      .btn-hero {
+        font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+        background: var(--brown); color: #fff; border: none; cursor: pointer;
+        padding: 15px 36px; border-radius: 2px;
+        transition: background .2s, transform .15s;
+      }
+      .btn-hero:hover { background: var(--brown-dk); transform: translateY(-1px); }
+      .hero-batch-note {
+        font-size: 12px; color: rgba(255,255,255,.75);
+      }
+      .hero-batch-note strong { color: #fff; }
 
       /* ─── INTRO STRIP ────────────────────────────────────── */
       .strip { background: var(--brown); color: #fff; padding: 20px 32px; display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; }
-      .strip-item { display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
-      .strip-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,.4); }
+      .strip-item { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+      .strip-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,.4); flex-shrink: 0; }
 
       /* ─── WHY SECTION ────────────────────────────────────── */
       .why { padding: var(--section-gap) 0; }
       .why-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start; }
-      .why-left h2 { font-size: clamp(32px, 3.5vw, 48px); font-weight: 800; line-height: 1.1; letter-spacing: -.02em; position: sticky; top: 96px; }
+      .why-left h2 { font-size: clamp(32px, 3.5vw, 48px); font-weight: 800; line-height: 1.1; letter-spacing: -.02em; position: sticky; top: calc(var(--nav-h) + 20px); }
       .why-left h2 em { font-style: normal; color: var(--brown); }
       .why-cards { display: flex; flex-direction: column; gap: 1px; }
       .why-card { background: var(--white); border: 1px solid var(--border); padding: 36px; transition: border-color .2s; position: relative; overflow: hidden; }
@@ -115,8 +157,94 @@
       .certs { display: flex; flex-direction: column; gap: 12px; }
       .cert-item { display: flex; align-items: center; gap: 16px; padding: 14px 20px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: 2px; font-size: 13px; }
       .cert-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
-      .director-visual { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); border-radius: 4px; aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; color: rgba(255,255,255,.2); font-size: 13px; text-align: center; padding: 40px; }
+      .director-visual {
+        background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+        border-radius: 4px; aspect-ratio: 3/4;
+        display: flex; align-items: center; justify-content: center;
+        flex-direction: column; gap: 12px;
+        color: rgba(255,255,255,.2); font-size: 13px; text-align: center; padding: 40px;
+      }
       .director-visual svg { opacity: .3; }
+
+      /* ─── PORTRAIT SLIDESHOW ─────────────────────────────── */
+      .gallery {
+        padding: var(--section-gap) 0;
+        background: var(--cream);
+        overflow: hidden;
+      }
+      .gallery-header { text-align: center; margin-bottom: 48px; }
+      .gallery-header h2 { font-size: clamp(28px, 3vw, 44px); font-weight: 800; letter-spacing: -.02em; margin-bottom: 10px; }
+      .gallery-header h2 em { font-style: normal; color: var(--brown); }
+      .gallery-header p { font-size: 15px; color: var(--mid); }
+
+      .slideshow-wrapper {
+        position: relative;
+        width: 100%;
+      }
+      .slideshow-track-container {
+        overflow: hidden;
+        width: 100%;
+      }
+      .slideshow-track {
+        display: flex;
+        gap: 20px;
+        transition: transform .5s cubic-bezier(.4,0,.2,1);
+        will-change: transform;
+      }
+      .slide {
+        flex: 0 0 calc(25% - 15px);
+        min-width: 0;
+        border-radius: 4px;
+        overflow: hidden;
+        background: var(--charcoal);
+        position: relative;
+        aspect-ratio: 2/3;
+      }
+      .slide-img {
+        width: 100%; height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform .4s ease;
+      }
+      .slide:hover .slide-img { transform: scale(1.04); }
+      /* Placeholder styling when no real image */
+      .slide-placeholder {
+        width: 100%; height: 100%;
+        background: linear-gradient(160deg, #2a2724 0%, #1c1a18 100%);
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center;
+        gap: 12px; color: rgba(255,255,255,.2);
+        font-size: 12px; letter-spacing: .06em; text-align: center;
+        padding: 24px;
+      }
+      .slide-placeholder svg { opacity: .25; }
+
+      /* Nav arrows */
+      .slide-btn {
+        position: absolute; top: 50%; transform: translateY(-50%);
+        width: 44px; height: 44px; border-radius: 50%;
+        background: var(--white); border: 1px solid var(--border);
+        cursor: pointer; display: flex; align-items: center; justify-content: center;
+        z-index: 10; transition: background .2s, border-color .2s, box-shadow .2s;
+        box-shadow: 0 4px 16px rgba(0,0,0,.1);
+      }
+      .slide-btn:hover { background: var(--brown); border-color: var(--brown); }
+      .slide-btn:hover svg { stroke: #fff; }
+      .slide-btn svg { stroke: var(--charcoal); transition: stroke .2s; }
+      .slide-btn.prev { left: -22px; }
+      .slide-btn.next { right: -22px; }
+      .slide-btn:disabled { opacity: .35; pointer-events: none; }
+
+      /* Dots */
+      .slide-dots {
+        display: flex; justify-content: center; gap: 8px; margin-top: 32px;
+      }
+      .dot {
+        width: 6px; height: 6px; border-radius: 50%;
+        background: var(--border); border: none; cursor: pointer;
+        transition: background .2s, transform .2s; padding: 0;
+      }
+      .dot.active { background: var(--brown); transform: scale(1.4); }
 
       /* ─── ROADMAP ────────────────────────────────────────── */
       .roadmap { padding: var(--section-gap) 0; }
@@ -147,7 +275,7 @@
       /* ─── FAQ ────────────────────────────────────────────── */
       .faq { padding: var(--section-gap) 0; }
       .faq-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start; }
-      .faq-left h2 { font-size: clamp(28px, 3vw, 42px); font-weight: 800; letter-spacing: -.02em; position: sticky; top: 96px; }
+      .faq-left h2 { font-size: clamp(28px, 3vw, 42px); font-weight: 800; letter-spacing: -.02em; position: sticky; top: calc(var(--nav-h) + 20px); }
       .faq-left h2 em { font-style: normal; color: var(--brown); }
       .faq-items { display: flex; flex-direction: column; }
       .faq-item { border-bottom: 1px solid var(--border); }
@@ -190,35 +318,52 @@
 
       /* ─── FOOTER ─────────────────────────────────────────── */
       footer { background: var(--charcoal); color: rgba(255,255,255,.5); padding: 40px 32px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-      .footer-logo { font-size: 14px; font-weight: 800; letter-spacing: .12em; color: #fff; text-transform: uppercase; }
-      .footer-logo span { display: block; font-size: 8px; font-weight: 400; letter-spacing: .2em; color: rgba(255,255,255,.4); margin-top: 2px; }
+      .footer-logo-img { height: 80px; width: auto; object-fit: contain; }
+      .footer-logo-placeholder { height: 36px; display: flex; align-items: center; background: rgba(255,255,255,.08); border-radius: 2px; padding: 0 14px; font-size: 11px; color: rgba(255,255,255,.4); letter-spacing: .08em; white-space: nowrap; }
       footer p { font-size: 12px; }
       .footer-contact { font-size: 12px; display: flex; flex-direction: column; gap: 4px; text-align: right; }
 
       /* ─── RESPONSIVE ─────────────────────────────────────── */
+      @media (max-width: 1000px) {
+        .slide { flex: 0 0 calc(33.333% - 14px); }
+      }
+
       @media (max-width: 900px) {
-        .hero-left { padding: 80px 24px; max-width: 100%; }
-        .hero-ring-1, .hero-ring-2, .hero-glow { display: none; }
+        :root { --nav-h: 56px; }
         .why-grid, .director-grid, .faq-grid, .enroll-inner { grid-template-columns: 1fr; gap: 40px; }
         .phases { grid-template-columns: 1fr; }
         .details-grid { grid-template-columns: 1fr 1fr; }
         .why-left h2, .faq-left h2 { position: static; }
-        footer { flex-direction: column; text-align: center; }
+        footer { flex-direction: column; text-align: center; align-items: center; }
         .footer-contact { text-align: center; }
-        .strip { gap: 20px; }
+        .strip { gap: 16px; }
+        .hero-banner-overlay { padding: 32px 32px; }
+        .hero-banner-title { font-size: clamp(22px, 5vw, 40px); }
+        .slide { flex: 0 0 calc(50% - 10px); }
+        .slide-btn.prev { left: -12px; }
+        .slide-btn.next { right: -12px; }
       }
+
       @media (max-width: 600px) {
         :root { --section-gap: 64px; }
         .container { padding: 0 20px; }
         .details-grid { grid-template-columns: 1fr; }
         nav .inner { padding: 0 20px; }
         .form-card { padding: 32px 24px; }
-        .hero-left { padding: 64px 20px; }
-        .hero h1 { font-size: clamp(42px, 12vw, 72px); }
+        .hero-banner-overlay { padding: 24px 20px; }
+        .hero-banner-title { font-size: clamp(20px, 7vw, 34px); }
+        .hero-banner-badges { display: none; }
+        .hero-batch-note { display: none; }
+        .slide { flex: 0 0 calc(100% - 0px); }
+        .slide-btn { display: none; }
+        .enroll-inner { gap: 32px; }
+        .gallery-header { padding: 0 20px; }
+        .strip-dot { display: none; }
+        .strip { gap: 12px; padding: 16px 20px; }
+        .strip-item { font-size: 11px; }
       }
 
-      /* ─── ANIMATIONS ─────────────────────────────────────── */
-      @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+      @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
       .fade-up { opacity: 0; animation: fadeUp .6s ease forwards; }
       .fd-1 { animation-delay: .1s; } .fd-2 { animation-delay: .25s; } .fd-3 { animation-delay: .4s; } .fd-4 { animation-delay: .55s; }
     </style>
@@ -228,42 +373,44 @@
     <!-- NAV -->
     <nav>
       <div class="inner">
-        <div class="nav-logo">SNIP <span>Academy of Hair & Makeup</span></div>
+        <!-- Replace src with your actual logo file path -->
+        <img src="/assests/Snip-Academy-Logo.png" alt="Snip Academy of Hair & Makeup" class="nav-logo-img"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="nav-logo-placeholder" style="display:none;">SNIP ACADEMY — Replace with Logo</div>
         <button class="nav-cta" onclick="document.getElementById('enroll').scrollIntoView({behavior:'smooth'})">Enquire Now</button>
       </div>
     </nav>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-ring-1"></div>
-      <div class="hero-ring-2"></div>
-      <div class="hero-glow"></div>
-      <div class="container">
-        <div class="hero-left">
-          <p class="hero-eyebrow fade-up fd-1">6-Month Professional Programme</p>
-          <h1 class="fade-up fd-2">Transform Your<br />Passion into a<br /><em>Career.</em></h1>
-          <p class="hero-sub fade-up fd-3">
-            Join the 6-Month Professional/ Foundation Hair Dresser Program at Snip Academy of Hair & Makeup. Led by Anjali Noronha, an accomplished and highly respected professional in the hair and makeup industry.
-          </p>
-          <p class="hero-sub fade-up fd-3">
-            This course takes you from a beginner to a working professional with 3 months of training and a guaranteed 3-month internship at Snip, Goa.
-          </p>
-          <div class="hero-badges fade-up fd-3">
-            <div class="badge">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    <!-- HERO BANNER -->
+    <section class="hero-banner">
+      <img
+        src="assests/Snip-banner.jpeg"
+        alt="Pursue a high paying career in Hairdressing — Snip Academy"
+        class="hero-banner-img"
+      />
+      <div class="hero-banner-overlay">
+        <div class="hero-banner-content">
+          <p class="hero-banner-eyebrow fade-up fd-1">6-Month Professional Programme</p>
+          <h1 class="hero-banner-title fade-up fd-2">
+            Transform Your<br />Passion into a<br /><em>Career.</em>
+          </h1>
+          <div class="hero-banner-badges fade-up fd-3">
+            <div class="hero-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
               Certified Course
             </div>
-            <div class="badge">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div class="hero-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
               Real Client Experience
             </div>
-            <div class="badge">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <div class="hero-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
               Guaranteed Placement
             </div>
           </div>
-          <div class="hero-actions fade-up fd-4">
-            <button class="btn-primary" onclick="document.getElementById('enroll').scrollIntoView({behavior:'smooth'})">Enroll Now</button>
+          <div class="hero-banner-actions fade-up fd-4">
+            <button class="btn-hero" onclick="document.getElementById('enroll').scrollIntoView({behavior:'smooth'})">Enroll Now →</button>
+            <span class="hero-batch-note">Batch starts <strong>20th April 2026</strong> · Limited Seats</span>
           </div>
         </div>
       </div>
@@ -342,6 +489,46 @@
       </div>
     </section>
 
+    <!-- PORTRAIT GALLERY SLIDESHOW -->
+    <section class="gallery">
+      <div class="container">
+        <div class="gallery-header">
+          <p class="section-label">Our Students & Work</p>
+          <h2>Stories of <em>Transformation</em></h2>
+          <p>A glimpse into life at Snip Academy</p>
+        </div>
+        <div class="slideshow-wrapper">
+          <button class="slide-btn prev" id="slidePrev" aria-label="Previous">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="slideshow-track-container">
+            <div class="slideshow-track" id="slideshowTrack">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <img src="assests/ss1.webp" alt="Portrait photo 1" class="slide-img">
+              </div>
+              <!-- Slide 2 -->
+              <div class="slide">
+                <img src="assests/ss2.webp" alt="Portrait photo 1" class="slide-img">
+              </div>
+              <!-- Slide 3 -->
+              <div class="slide">
+                <img src="assests/ss3.webp" alt="Portrait photo 1" class="slide-img">
+              </div>
+              <!-- Slide 4 -->
+              <div class="slide">
+                <img src="assests/ss4.webp" alt="Portrait photo 1" class="slide-img">
+              </div>
+            </div>
+          </div>
+          <button class="slide-btn next" id="slideNext" aria-label="Next">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+        <div class="slide-dots" id="slideDots"></div>
+      </div>
+    </section>
+
     <!-- ROADMAP -->
     <section class="roadmap">
       <div class="container">
@@ -386,47 +573,35 @@
         <h2>Course Details</h2>
         <div class="details-grid">
           <div class="detail-card">
-            <div class="detail-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 2V5M17 2V5M3 9H21M5 5H19C20.1 5 21 5.9 21 7V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V7C3 5.9 3.9 5 5 5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
+            <div class="detail-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 2V5M17 2V5M3 9H21M5 5H19C20.1 5 21 5.9 21 7V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V7C3 5.9 3.9 5 5 5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
             <div class="detail-label">Duration</div>
             <div class="detail-value">6 Months</div>
             <div class="detail-sub">5 days per week</div>
           </div>
           <div class="detail-card">
-            <div class="detail-icon">
-              <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7V12L15 15" stroke="currentColor" stroke-width="2"/></svg>
-            </div>
+            <div class="detail-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7V12L15 15" stroke="currentColor" stroke-width="2"/></svg></div>
             <div class="detail-label">Timings</div>
             <div class="detail-value">10 AM – 2 PM</div>
             <div class="detail-sub">4+ hours per day</div>
           </div>
           <div class="detail-card">
-            <div class="detail-icon">
-              <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M2 10H22" stroke="currentColor" stroke-width="2"/></svg>
-            </div>
+            <div class="detail-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M2 10H22" stroke="currentColor" stroke-width="2"/></svg></div>
             <div class="detail-label">Course Fee</div>
             <div class="detail-value">₹1,50,000</div>
             <div class="detail-sub">(Includes 3 months of training + 3 months internship).</div>
           </div>
           <div class="detail-card">
-            <div class="detail-icon">
-              <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M2 10H22" stroke="currentColor" stroke-width="2"/></svg>
-            </div>
+            <div class="detail-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M2 10H22" stroke="currentColor" stroke-width="2"/></svg></div>
             <div class="detail-label">Payment</div>
             <div class="detail-value">Flexible payment plans are available.</div>
           </div>
           <div class="detail-card">
-            <div class="detail-icon">
-              <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M9 11L12 14L20 6" stroke="currentColor" stroke-width="2"/><path d="M20 12V19H4V5H14" stroke="currentColor" stroke-width="2"/></svg>
-            </div>
+            <div class="detail-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M9 11L12 14L20 6" stroke="currentColor" stroke-width="2"/><path d="M20 12V19H4V5H14" stroke="currentColor" stroke-width="2"/></svg></div>
             <div class="detail-label">Requirement</div>
             <div class="detail-value">No prior experience needed. We teach you everything from scratch.</div>
           </div>
           <div class="detail-card">
-            <div class="detail-icon">
-              <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M3 7L12 3L21 7L12 11L3 7Z" stroke="currentColor" stroke-width="2"/><path d="M6 9V14C6 16 9 18 12 18C15 18 18 16 18 14V9" stroke="currentColor" stroke-width="2"/></svg>
-            </div>
+            <div class="detail-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M3 7L12 3L21 7L12 11L3 7Z" stroke="currentColor" stroke-width="2"/><path d="M6 9V14C6 16 9 18 12 18C15 18 18 16 18 14V9" stroke="currentColor" stroke-width="2"/></svg></div>
             <div class="detail-label">Certification</div>
             <div class="detail-value">You will receive a professional hairdresser certificate from Snip Academy of Hair and Makeup.</div>
           </div>
@@ -450,13 +625,7 @@
             <div class="faq-item">
               <div class="faq-q" onclick="toggleFaq(this)">Can I work as a hairstylist after completing the course?<span class="faq-icon">+</span></div>
               <div class="faq-a">Absolutely. After finishing the program, you will be fully equipped to pursue several career paths, including:
-                <ul>
-                  <li>Joining the professional styling team at Snip</li>
-                  <li>Working in high-end salons across the country</li>
-                  <li>Starting your own independent salon or studio</li>
-                  <li>Working in the hair department for film, television, and advertising</li>
-                  <li>Designing looks for fashion editorials and magazine features</li>
-                </ul>
+                <ul><li>Joining the professional styling team at Snip</li><li>Working in high-end salons across the country</li><li>Starting your own independent salon or studio</li><li>Working in the hair department for film, television, and advertising</li><li>Designing looks for fashion editorials and magazine features</li></ul>
               </div>
             </div>
             <div class="faq-item">
@@ -550,7 +719,9 @@
 
     <!-- FOOTER -->
     <footer>
-      <div class="footer-logo">SNIP <span>Academy of Hair & Makeup · Est. 1999, Goa</span></div>
+      <img src="assests/Snip-Academy-Logo.png" alt="Snip Academy" class="footer-logo-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      <div class="footer-logo-placeholder" style="display:none;">SNIP ACADEMY — Replace with Logo</div>
       <p>© 2026 Snip Academy. All rights reserved.</p>
       <div class="footer-contact">
         <span>📞 Phone: —</span>
@@ -559,6 +730,7 @@
     </footer>
 
     <script>
+      /* ── FAQ ── */
       function toggleFaq(el) {
         const item = el.parentElement;
         const isOpen = item.classList.contains('open');
@@ -566,6 +738,69 @@
         if (!isOpen) item.classList.add('open');
       }
 
+      /* ── SLIDESHOW ── */
+      (function() {
+        const track     = document.getElementById('slideshowTrack');
+        const prevBtn   = document.getElementById('slidePrev');
+        const nextBtn   = document.getElementById('slideNext');
+        const dotsEl    = document.getElementById('slideDots');
+        const slides    = Array.from(track.querySelectorAll('.slide'));
+        let current     = 0;
+        let visibleCount = 4; // default desktop
+
+        function getVisible() {
+          const w = window.innerWidth;
+          if (w <= 600) return 1;
+          if (w <= 900) return 2;
+          if (w <= 1000) return 3;
+          return 4;
+        }
+
+        function maxIndex() {
+          return Math.max(0, slides.length - visibleCount);
+        }
+
+        function buildDots() {
+          dotsEl.innerHTML = '';
+          const total = maxIndex() + 1;
+          for (let i = 0; i < total; i++) {
+            const d = document.createElement('button');
+            d.className = 'dot' + (i === current ? ' active' : '');
+            d.onclick = () => goTo(i);
+            dotsEl.appendChild(d);
+          }
+        }
+
+        function goTo(idx) {
+          visibleCount = getVisible();
+          current = Math.min(Math.max(0, idx), maxIndex());
+          const slideWidth = slides[0].offsetWidth + 20; // width + gap
+          track.style.transform = `translateX(-${current * slideWidth}px)`;
+          prevBtn.disabled = current === 0;
+          nextBtn.disabled = current >= maxIndex();
+          buildDots();
+        }
+
+        prevBtn.addEventListener('click', () => goTo(current - 1));
+        nextBtn.addEventListener('click', () => goTo(current + 1));
+
+        // Auto-advance every 4s
+        let autoTimer = setInterval(() => goTo(current >= maxIndex() ? 0 : current + 1), 4000);
+        [prevBtn, nextBtn].forEach(b => b.addEventListener('click', () => { clearInterval(autoTimer); autoTimer = setInterval(() => goTo(current >= maxIndex() ? 0 : current + 1), 4000); }));
+
+        // Touch/swipe support
+        let touchStartX = 0;
+        track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+        track.addEventListener('touchend', e => {
+          const diff = touchStartX - e.changedTouches[0].clientX;
+          if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
+        });
+
+        window.addEventListener('resize', () => goTo(0));
+        goTo(0);
+      })();
+
+      /* ── FORM ── */
       const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
 
       function validate() {
