@@ -6,20 +6,40 @@
     <title>Snip Academy of Hair & Makeup</title>
     <!-- Meta Pixel Code -->
     <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1451329246369723');
-      fbq('track', 'PageView');
-      </script>
-      <noscript>
-        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1451329246369723&ev=PageView&noscript=1"/>
-      </noscript>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+      fbq("init", "1451329246369723");
+      fbq("track", "PageView");
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1451329246369723&ev=PageView&noscript=1"
+      />
+    </noscript>
     <!-- End Meta Pixel Code -->
     <style>
       :root {
@@ -35,233 +55,1118 @@
         --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
         --nav-h: 64px;
       }
-      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-      html{scroll-behavior:smooth;}
-      body{font-family:var(--font);background:var(--cream);color:var(--charcoal);line-height:1.6;-webkit-font-smoothing:antialiased;}
-      img{display:block;max-width:100%;}
-      a{text-decoration:none;color:inherit;}
-      .container{max-width:1140px;margin:0 auto;padding:0 32px;}
-      .section-label{font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);margin-bottom:16px;}
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: var(--font);
+        background: var(--cream);
+        color: var(--charcoal);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 32px;
+      }
+      .section-label {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--mid);
+        margin-bottom: 16px;
+      }
 
-      nav{position:fixed;top:0;left:0;width:100%;z-index:200;background:rgba(245,240,234,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
-      nav .inner{max-width:1140px;margin:0 auto;padding:0 32px;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;}
-      .nav-logo-img{height:80px;width:auto;display:block;object-fit:contain;}
-      .nav-logo-placeholder{height:40px;display:flex;align-items:center;background:var(--border);border-radius:2px;padding:0 12px;font-size:11px;color:var(--mid);letter-spacing:0.08em;white-space:nowrap;}
-      .nav-cta{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;background:var(--brown);color:#fff;border:none;cursor:pointer;padding:10px 24px;border-radius:2px;transition:background 0.2s;flex-shrink:0;}
-      .nav-cta:hover{background:var(--brown-dk);}
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 200;
+        background: rgba(245, 240, 234, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+      }
+      nav .inner {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 32px;
+        height: var(--nav-h);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .nav-logo-img {
+        height: 80px;
+        width: auto;
+        display: block;
+        object-fit: contain;
+      }
+      .nav-logo-placeholder {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        background: var(--border);
+        border-radius: 2px;
+        padding: 0 12px;
+        font-size: 11px;
+        color: var(--mid);
+        letter-spacing: 0.08em;
+        white-space: nowrap;
+      }
+      .nav-cta {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        background: var(--brown);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 10px 24px;
+        border-radius: 2px;
+        transition: background 0.2s;
+        flex-shrink: 0;
+      }
+      .nav-cta:hover {
+        background: var(--brown-dk);
+      }
 
-      .hero-banner{position:relative;margin-top:var(--nav-h);width:100%;overflow:hidden;background:var(--cream);}
-      .hero-banner-img{width:100%;display:block;max-height:90vh;object-fit:cover;object-position:center top;}
-      .hero-banner-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:48px 64px;background:linear-gradient(to top,rgba(28,26,24,0.55) 0%,rgba(28,26,24,0.15) 40%,transparent 70%);}
-      .hero-banner-content{max-width:560px;}
-      .hero-banner-title{font-size:clamp(28px,3.5vw,52px);font-weight:600;line-height:1.08;letter-spacing:-0.02em;color:#111;margin-bottom:24px;}
-      .hero-banner-title em{font-style:normal;color:var(--gold);}
-      .hero-banner-badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px;}
-      .hero-badge{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:600;color:#fff;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);backdrop-filter:blur(6px);padding:7px 14px;border-radius:100px;}
-      .hero-badge svg{color:var(--gold);flex-shrink:0;}
-      .hero-banner-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
-      .btn-hero{font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:var(--brown);color:#fff;border:none;cursor:pointer;padding:15px 36px;border-radius:2px;transition:background 0.2s,transform 0.15s;}
-      .btn-hero:hover{background:var(--brown-dk);transform:translateY(-1px);}
-      .hero-batch-note{font-size:12px;color:rgba(255,255,255,0.75);}
-      .hero-batch-note strong{color:#fff;}
+      .hero-banner {
+        position: relative;
+        margin-top: var(--nav-h);
+        width: 100%;
+        overflow: hidden;
+        background: var(--cream);
+      }
+      .hero-banner-img {
+        width: 100%;
+        display: block;
+        max-height: 90vh;
+        object-fit: cover;
+        object-position: center top;
+      }
+      .hero-banner-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 48px 64px;
+        background: linear-gradient(
+          to top,
+          rgba(28, 26, 24, 0.55) 0%,
+          rgba(28, 26, 24, 0.15) 40%,
+          transparent 70%
+        );
+      }
+      .hero-banner-content {
+        max-width: 560px;
+      }
+      .hero-banner-title {
+        font-size: clamp(28px, 3.5vw, 52px);
+        font-weight: 600;
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+        color: #111;
+        margin-bottom: 24px;
+      }
+      .hero-banner-title em {
+        font-style: normal;
+        color: var(--gold);
+      }
+      .hero-banner-badges {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 28px;
+      }
+      .hero-badge {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 11px;
+        font-weight: 600;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(6px);
+        padding: 7px 14px;
+        border-radius: 100px;
+      }
+      .hero-badge svg {
+        color: var(--gold);
+        flex-shrink: 0;
+      }
+      .hero-banner-actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .btn-hero {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        background: var(--brown);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 15px 36px;
+        border-radius: 2px;
+        transition:
+          background 0.2s,
+          transform 0.15s;
+      }
+      .btn-hero:hover {
+        background: var(--brown-dk);
+        transform: translateY(-1px);
+      }
+      .hero-batch-note {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.75);
+      }
+      .hero-batch-note strong {
+        color: #fff;
+      }
 
-      .why{padding:var(--section-gap) 0;}
-      .why-grid{display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start;}
-      .why-left h2{font-size:clamp(32px,3.5vw,48px);font-weight:800;line-height:1.1;letter-spacing:-0.02em;position:sticky;top:calc(var(--nav-h) + 20px);}
-      .why-left h2 em{font-style:normal;color:var(--brown);}
-      .why-cards{display:flex;flex-direction:column;gap:1px;}
-      .why-card{background:var(--white);border:1px solid var(--border);padding:36px;transition:border-color 0.2s;position:relative;overflow:hidden;}
-      .why-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--brown);transform:scaleY(0);transform-origin:bottom;transition:transform 0.3s ease;}
-      .why-card:hover::before{transform:scaleY(1);}
-      .why-card:hover{border-color:var(--brown);}
-      .card-num{font-size:18px;font-weight:700;letter-spacing:0.2em;color:var(--gold);margin-bottom:16px;}
-      .why-card h3{font-size:18px;font-weight:700;margin-bottom:10px;}
-      .why-card p{font-size:14px;color:var(--mid);line-height:1.7;}
+      .why {
+        padding: var(--section-gap) 0;
+      }
+      .why-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 80px;
+        align-items: start;
+      }
+      .why-left h2 {
+        font-size: clamp(32px, 3.5vw, 48px);
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        position: sticky;
+        top: calc(var(--nav-h) + 20px);
+      }
+      .why-left h2 em {
+        font-style: normal;
+        color: var(--brown);
+      }
+      .why-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+      }
+      .why-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        padding: 36px;
+        transition: border-color 0.2s;
+        position: relative;
+        overflow: hidden;
+      }
+      .why-card::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: var(--brown);
+        transform: scaleY(0);
+        transform-origin: bottom;
+        transition: transform 0.3s ease;
+      }
+      .why-card:hover::before {
+        transform: scaleY(1);
+      }
+      .why-card:hover {
+        border-color: var(--brown);
+      }
+      .card-num {
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        color: var(--gold);
+        margin-bottom: 16px;
+      }
+      .why-card h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .why-card p {
+        font-size: 14px;
+        color: var(--mid);
+        line-height: 1.7;
+      }
 
-      .director{background:var(--charcoal);color:#fff;padding:var(--section-gap) 0;}
-      .director-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
-      .director-label{font-size:10px;font-weight:700;letter-spacing:0.2em;color:var(--gold);margin-bottom:20px;text-transform:uppercase;}
-      .director h2{font-size:clamp(32px,3vw,48px);font-weight:800;line-height:1.1;letter-spacing:-0.02em;margin-bottom:20px;}
-      .director p{font-size:15px;color:rgba(255,255,255,0.65);line-height:1.8;margin-bottom:32px;}
-      .certs{display:flex;flex-direction:column;gap:12px;}
-      .cert-item{display:flex;align-items:center;gap:16px;padding:14px 20px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:2px;font-size:13px;}
-      .cert-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;}
-      .director-visual{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:4px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;overflow:hidden;}
-      .director-img{width:100%;height:100%;object-fit:cover;}
+      .director {
+        background: var(--charcoal);
+        color: #fff;
+        padding: var(--section-gap) 0;
+      }
+      .director-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+      .director-label {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        color: var(--gold);
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+      .director h2 {
+        font-size: clamp(32px, 3vw, 48px);
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        margin-bottom: 20px;
+      }
+      .director p {
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.65);
+        line-height: 1.8;
+        margin-bottom: 32px;
+      }
+      .certs {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .cert-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 14px 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 2px;
+        font-size: 13px;
+      }
+      .cert-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--gold);
+        flex-shrink: 0;
+      }
+      .director-visual {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 4px;
+        aspect-ratio: 3/4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .director-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
       /* ── CHANGED: solid gold matching the cert-dot colour ── */
-      .director-name{color:var(--gold);}
-
-      .gallery{padding:var(--section-gap) 0;background:var(--cream);overflow:hidden;}
-      .gallery-header{text-align:center;margin-bottom:48px;}
-      .gallery-header h2{font-size:clamp(28px,3vw,44px);font-weight:800;letter-spacing:-0.02em;margin-bottom:10px;}
-      .gallery-header h2 em{font-style:normal;color:var(--brown);}
-      .gallery-header p{font-size:15px;color:var(--mid);}
-      .slideshow-wrapper{position:relative;width:100%;}
-      .slideshow-track-container{overflow:hidden;width:100%;}
-      .slideshow-track{display:flex;gap:20px;transition:transform 0.5s cubic-bezier(0.4,0,0.2,1);will-change:transform;}
-      .slide{flex:0 0 calc(25% - 15px);min-width:0;border-radius:4px;overflow:hidden;background:var(--charcoal);position:relative;aspect-ratio:2/3;}
-      .slide-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease;}
-      .slide:hover .slide-img{transform:scale(1.04);}
-      .slide-btn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:var(--white);border:1px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;transition:background 0.2s,border-color 0.2s,box-shadow 0.2s;box-shadow:0 4px 16px rgba(0,0,0,0.1);}
-      .slide-btn:hover{background:var(--brown);border-color:var(--brown);}
-      .slide-btn:hover svg{stroke:#fff;}
-      .slide-btn svg{stroke:var(--charcoal);transition:stroke 0.2s;}
-      .slide-btn.prev{left:-22px;}
-      .slide-btn.next{right:-22px;}
-      .slide-btn:disabled{opacity:0.35;pointer-events:none;}
-      .slide-dots{display:flex;justify-content:center;gap:8px;margin-top:32px;}
-      .dot{width:6px;height:6px;border-radius:50%;background:var(--border);border:none;cursor:pointer;transition:background 0.2s,transform 0.2s;padding:0;}
-      .dot.active{background:var(--brown);transform:scale(1.4);}
-
-      .roadmap{padding:var(--section-gap) 0;}
-      .roadmap-header{text-align:center;margin-bottom:64px;}
-      .roadmap-header h2{font-size:clamp(32px,3.5vw,52px);font-weight:800;letter-spacing:-0.02em;margin-bottom:12px;}
-      .roadmap-header h2 em{font-style:normal;color:var(--brown);}
-      .phases{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
-      .phase{border:1px solid var(--border);border-radius:4px;overflow:hidden;}
-      .phase-head{background:var(--brown);color:#fff;padding:28px 32px;}
-      .phase-head .ph-tag{font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;opacity:0.7;margin-bottom:8px;}
-      .phase-head h3{font-size:22px;font-weight:800;}
-      .phase-body{background:var(--white);padding:32px;}
-      .phase-items{list-style:none;display:flex;flex-direction:column;gap:14px;}
-      .phase-items li{display:flex;gap:14px;font-size:14px;color:var(--charcoal);line-height:1.5;}
-      .phase-items li::before{content:"→";color:var(--brown);font-weight:700;flex-shrink:0;margin-top:1px;}
-
-      .details{background:var(--charcoal);color:#fff;padding:var(--section-gap) 0;}
-      .details h2{font-size:clamp(28px,3vw,44px);font-weight:800;letter-spacing:-0.02em;margin-bottom:48px;text-align:center;}
-      .details-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);border-radius:4px;overflow:hidden;}
-      .detail-card{background:var(--charcoal);padding:36px 32px;border-right:1px solid rgba(255,255,255,0.08);}
-      .detail-card:nth-child(3n){border-right:none;}
-      .detail-icon{margin-bottom:16px;color:rgba(255,255,255,0.6);}
-      .detail-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:8px;}
-      .detail-value{font-size:18px;font-weight:700;color:#fff;margin-bottom:6px;line-height:1.4;}
-      .detail-sub{font-size:13px;color:rgba(255,255,255,0.5);}
-
-      .faq{padding:var(--section-gap) 0;}
-      .faq-grid{display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start;}
-      .faq-left h2{font-size:clamp(28px,3vw,42px);font-weight:800;letter-spacing:-0.02em;position:sticky;top:calc(var(--nav-h) + 20px);}
-      .faq-left h2 em{font-style:normal;color:var(--brown);}
-      .faq-items{display:flex;flex-direction:column;}
-      .faq-item{border-bottom:1px solid var(--border);}
-      .faq-q{display:flex;justify-content:space-between;align-items:center;padding:22px 0;cursor:pointer;font-size:15px;font-weight:600;color:var(--charcoal);gap:16px;user-select:none;}
-      .faq-q:hover{color:var(--brown);}
-      .faq-icon{width:24px;height:24px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;color:var(--brown);transition:transform 0.25s,background 0.2s;}
-      .faq-item.open .faq-icon{transform:rotate(45deg);background:var(--brown);color:#fff;border-color:var(--brown);}
-      .faq-a{font-size:14px;color:var(--mid);line-height:1.75;max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.25s;padding-bottom:0;}
-      .faq-item.open .faq-a{max-height:400px;padding-bottom:22px;}
-      .faq-a ul{margin-top:10px;padding-left:20px;display:flex;flex-direction:column;gap:6px;}
-      .faq-a ul li{list-style-type:"→  ";}
-
-      .enroll{background:var(--brown);padding:var(--section-gap) 0;}
-      .enroll-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
-      .enroll-left{color:#fff;}
-      .enroll-left h2{font-size:clamp(28px,3vw,44px);font-weight:800;line-height:1.1;letter-spacing:-0.02em;margin-bottom:20px;}
-      .form-card{background:var(--white);border-radius:4px;padding:48px 40px;box-shadow:0 24px 64px rgba(0,0,0,0.15);}
-      .form-card h3{font-size:20px;font-weight:800;margin-bottom:6px;}
-      .form-card .form-sub{font-size:13px;color:var(--mid);margin-bottom:32px;}
-      .field{margin-bottom:20px;position:relative;}
-      .field label{display:block;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);margin-bottom:8px;}
-      .field input,.field select{width:100%;padding:14px 16px;border:1.5px solid var(--border);border-radius:2px;font-family:var(--font);font-size:14px;color:var(--charcoal);background:var(--cream);outline:none;transition:border-color 0.2s,background 0.2s;appearance:none;}
-      .field input::placeholder{color:#b0a89e;}
-      .field input:focus,.field select:focus{border-color:var(--brown);background:#fff;}
-      .field.error input,.field.error select{border-color:#c0392b;}
-      .field-err{display:none;font-size:11px;color:#c0392b;margin-top:5px;font-weight:500;}
-      .field.error .field-err{display:block;}
-      .select-wrap{position:relative;}
-      .select-wrap::after{content:"▾";position:absolute;right:16px;top:50%;transform:translateY(-50%);color:var(--mid);pointer-events:none;font-size:12px;}
-      .submit-btn{width:100%;padding:16px;background:var(--brown);color:#fff;border:none;border-radius:2px;font-family:var(--font);font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:background 0.2s,transform 0.15s;margin-top:8px;}
-      .submit-btn:hover{background:var(--brown-dk);transform:translateY(-1px);}
-      .submit-btn:disabled{opacity:0.6;cursor:not-allowed;transform:none;}
-      .form-privacy{font-size:11px;color:var(--mid);text-align:center;margin-top:14px;}
-      .form-success{display:none;text-align:center;padding:24px 0;}
-      .form-success .s-icon{font-size:40px;margin-bottom:12px;}
-      .form-success h4{font-size:18px;font-weight:800;margin-bottom:8px;}
-      .form-success p{font-size:14px;color:var(--mid);}
-
-      footer{background:var(--charcoal);color:rgba(255,255,255,0.5);padding:40px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
-      .footer-logo-img{height:120px;width:auto;object-fit:contain;}
-      .footer-logo-placeholder{height:36px;display:flex;align-items:center;background:rgba(255,255,255,0.08);border-radius:2px;padding:0 14px;font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:0.08em;white-space:nowrap;}
-      footer p{font-size:12px;}
-      .footer-contact{font-size:12px;display:flex;flex-direction:column;gap:4px;text-align:right;}
-
-      @media(max-width:1000px){.slide{flex:0 0 calc(33.333% - 14px);}}
-      @media(max-width:900px){
-        :root{--nav-h:56px;}
-        .why-grid,.director-grid,.faq-grid,.enroll-inner{grid-template-columns:1fr;gap:40px;}
-        .phases{grid-template-columns:1fr;}
-        .details-grid{grid-template-columns:1fr 1fr;}
-        .why-left h2,.faq-left h2{position:static;}
-        footer{flex-direction:column;text-align:center;align-items:center;}
-        .footer-contact{text-align:center;}
-        .hero-banner-overlay{padding:32px 32px;}
-        .hero-banner-title{font-size:clamp(22px,5vw,40px);}
-        .slide{flex:0 0 calc(50% - 10px);}
-        .slide-btn.prev{left:-12px;}
-        .slide-btn.next{right:-12px;}
+      .director-name {
+        color: var(--gold);
       }
-      @media(max-width:600px){
-        :root{--section-gap:64px;}
-        .container{padding:0 20px;}
-        .details-grid{grid-template-columns:1fr;}
-        nav .inner{padding:0 20px;}
-        .form-card{padding:32px 24px;}
-        .hero-banner-overlay{padding:24px 20px;}
-        .hero-banner-title{font-size:clamp(20px,7vw,34px);}
-        .hero-banner-badges{display:none;}
-        .hero-batch-note{display:none;}
-        .slide{flex:0 0 calc(100%);}
-        .slide-btn{display:none;}
-        .enroll-inner{gap:32px;}
-        .gallery-header{padding:0 20px;}
+
+      .gallery {
+        padding: var(--section-gap) 0;
+        background: var(--cream);
+        overflow: hidden;
       }
-      @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
-      .fade-up{opacity:0;animation:fadeUp 0.6s ease forwards;}
-      .fd-1{animation-delay:0.1s;}.fd-2{animation-delay:0.25s;}.fd-3{animation-delay:0.4s;}.fd-4{animation-delay:0.55s;}
+      .gallery-header {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+      .gallery-header h2 {
+        font-size: clamp(28px, 3vw, 44px);
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin-bottom: 10px;
+      }
+      .gallery-header h2 em {
+        font-style: normal;
+        color: var(--brown);
+      }
+      .gallery-header p {
+        font-size: 15px;
+        color: var(--mid);
+      }
+      .slideshow-wrapper {
+        position: relative;
+        width: 100%;
+      }
+      .slideshow-track-container {
+        overflow: hidden;
+        width: 100%;
+      }
+      .slideshow-track {
+        display: flex;
+        gap: 20px;
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: transform;
+      }
+      .slide {
+        flex: 0 0 calc(25% - 15px);
+        min-width: 0;
+        border-radius: 4px;
+        overflow: hidden;
+        background: var(--charcoal);
+        position: relative;
+        aspect-ratio: 2/3;
+      }
+      .slide-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+      .slide:hover .slide-img {
+        transform: scale(1.04);
+      }
+      .slide-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: var(--white);
+        border: 1px solid var(--border);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        transition:
+          background 0.2s,
+          border-color 0.2s,
+          box-shadow 0.2s;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      }
+      .slide-btn:hover {
+        background: var(--brown);
+        border-color: var(--brown);
+      }
+      .slide-btn:hover svg {
+        stroke: #fff;
+      }
+      .slide-btn svg {
+        stroke: var(--charcoal);
+        transition: stroke 0.2s;
+      }
+      .slide-btn.prev {
+        left: -22px;
+      }
+      .slide-btn.next {
+        right: -22px;
+      }
+      .slide-btn:disabled {
+        opacity: 0.35;
+        pointer-events: none;
+      }
+      .slide-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 32px;
+      }
+      .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--border);
+        border: none;
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          transform 0.2s;
+        padding: 0;
+      }
+      .dot.active {
+        background: var(--brown);
+        transform: scale(1.4);
+      }
+
+      .roadmap {
+        padding: var(--section-gap) 0;
+      }
+      .roadmap-header {
+        text-align: center;
+        margin-bottom: 64px;
+      }
+      .roadmap-header h2 {
+        font-size: clamp(32px, 3.5vw, 52px);
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin-bottom: 12px;
+      }
+      .roadmap-header h2 em {
+        font-style: normal;
+        color: var(--brown);
+      }
+      .phases {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+      .phase {
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      .phase-head {
+        background: var(--brown);
+        color: #fff;
+        padding: 28px 32px;
+      }
+      .phase-head .ph-tag {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        opacity: 0.7;
+        margin-bottom: 8px;
+      }
+      .phase-head h3 {
+        font-size: 22px;
+        font-weight: 800;
+      }
+      .phase-body {
+        background: var(--white);
+        padding: 32px;
+      }
+      .phase-items {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .phase-items li {
+        gap: 14px;
+        font-size: 14px;
+        color: var(--charcoal);
+        line-height: 1.5;
+      }
+      .phase-items li::before {
+        content: "→";
+        color: var(--brown);
+        font-weight: 700;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+
+      .details {
+        background: var(--charcoal);
+        color: #fff;
+        padding: var(--section-gap) 0;
+      }
+      .details h2 {
+        font-size: clamp(28px, 3vw, 44px);
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin-bottom: 48px;
+        text-align: center;
+      }
+      .details-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      .detail-card {
+        background: var(--charcoal);
+        padding: 36px 32px;
+        border-right: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .detail-card:nth-child(3n) {
+        border-right: none;
+      }
+      .detail-icon {
+        margin-bottom: 16px;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .detail-label {
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.4);
+        margin-bottom: 8px;
+      }
+      .detail-value {
+        font-size: 18px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 6px;
+        line-height: 1.4;
+      }
+      .detail-sub {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .faq {
+        padding: var(--section-gap) 0;
+      }
+      .faq-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 80px;
+        align-items: start;
+      }
+      .faq-left h2 {
+        font-size: clamp(28px, 3vw, 42px);
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        position: sticky;
+        top: calc(var(--nav-h) + 20px);
+      }
+      .faq-left h2 em {
+        font-style: normal;
+        color: var(--brown);
+      }
+      .faq-items {
+        display: flex;
+        flex-direction: column;
+      }
+      .faq-item {
+        border-bottom: 1px solid var(--border);
+      }
+      .faq-q {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 0;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--charcoal);
+        gap: 16px;
+        user-select: none;
+      }
+      .faq-q:hover {
+        color: var(--brown);
+      }
+      .faq-icon {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 16px;
+        color: var(--brown);
+        transition:
+          transform 0.25s,
+          background 0.2s;
+      }
+      .faq-item.open .faq-icon {
+        transform: rotate(45deg);
+        background: var(--brown);
+        color: #fff;
+        border-color: var(--brown);
+      }
+      .faq-a {
+        font-size: 14px;
+        color: var(--mid);
+        line-height: 1.75;
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.35s ease,
+          padding 0.25s;
+        padding-bottom: 0;
+      }
+      .faq-item.open .faq-a {
+        max-height: 400px;
+        padding-bottom: 22px;
+      }
+      .faq-a ul {
+        margin-top: 10px;
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .faq-a ul li {
+        list-style-type: "→  ";
+      }
+
+      .enroll {
+        background: var(--brown);
+        padding: var(--section-gap) 0;
+      }
+      .enroll-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: start;
+      }
+      .enroll-left {
+        color: #fff;
+      }
+      .enroll-left h2 {
+        font-size: clamp(28px, 3vw, 44px);
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        margin-bottom: 20px;
+      }
+      .form-card {
+        background: var(--white);
+        border-radius: 4px;
+        padding: 48px 40px;
+        box-shadow: 0 24px 64px rgba(0, 0, 0, 0.15);
+      }
+      .form-card h3 {
+        font-size: 20px;
+        font-weight: 800;
+        margin-bottom: 6px;
+      }
+      .form-card .form-sub {
+        font-size: 13px;
+        color: var(--mid);
+        margin-bottom: 32px;
+      }
+      .field {
+        margin-bottom: 20px;
+        position: relative;
+      }
+      .field label {
+        display: block;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--mid);
+        margin-bottom: 8px;
+      }
+      .field input,
+      .field select {
+        width: 100%;
+        padding: 14px 16px;
+        border: 1.5px solid var(--border);
+        border-radius: 2px;
+        font-family: var(--font);
+        font-size: 14px;
+        color: var(--charcoal);
+        background: var(--cream);
+        outline: none;
+        transition:
+          border-color 0.2s,
+          background 0.2s;
+        appearance: none;
+      }
+      .field input::placeholder {
+        color: #b0a89e;
+      }
+      .field input:focus,
+      .field select:focus {
+        border-color: var(--brown);
+        background: #fff;
+      }
+      .field.error input,
+      .field.error select {
+        border-color: #c0392b;
+      }
+      .field-err {
+        display: none;
+        font-size: 11px;
+        color: #c0392b;
+        margin-top: 5px;
+        font-weight: 500;
+      }
+      .field.error .field-err {
+        display: block;
+      }
+      .select-wrap {
+        position: relative;
+      }
+      .select-wrap::after {
+        content: "▾";
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--mid);
+        pointer-events: none;
+        font-size: 12px;
+      }
+      .submit-btn {
+        width: 100%;
+        padding: 16px;
+        background: var(--brown);
+        color: #fff;
+        border: none;
+        border-radius: 2px;
+        font-family: var(--font);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          transform 0.15s;
+        margin-top: 8px;
+      }
+      .submit-btn:hover {
+        background: var(--brown-dk);
+        transform: translateY(-1px);
+      }
+      .submit-btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+      }
+      .form-privacy {
+        font-size: 11px;
+        color: var(--mid);
+        text-align: center;
+        margin-top: 14px;
+      }
+      .form-success {
+        display: none;
+        text-align: center;
+        padding: 24px 0;
+      }
+      .form-success .s-icon {
+        font-size: 40px;
+        margin-bottom: 12px;
+      }
+      .form-success h4 {
+        font-size: 18px;
+        font-weight: 800;
+        margin-bottom: 8px;
+      }
+      .form-success p {
+        font-size: 14px;
+        color: var(--mid);
+      }
+
+      footer {
+        background: var(--charcoal);
+        color: rgba(255, 255, 255, 0.5);
+        padding: 40px 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .footer-logo-img {
+        height: 120px;
+        width: auto;
+        object-fit: contain;
+      }
+      .footer-logo-placeholder {
+        height: 36px;
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 2px;
+        padding: 0 14px;
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.4);
+        letter-spacing: 0.08em;
+        white-space: nowrap;
+      }
+      footer p {
+        font-size: 12px;
+      }
+      .footer-contact {
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        text-align: right;
+      }
+
+      @media (max-width: 1000px) {
+        .slide {
+          flex: 0 0 calc(33.333% - 14px);
+        }
+      }
+      @media (max-width: 900px) {
+        :root {
+          --nav-h: 56px;
+        }
+        .why-grid,
+        .director-grid,
+        .faq-grid,
+        .enroll-inner {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .phases {
+          grid-template-columns: 1fr;
+        }
+        .details-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .why-left h2,
+        .faq-left h2 {
+          position: static;
+        }
+        footer {
+          flex-direction: column;
+          text-align: center;
+          align-items: center;
+        }
+        .footer-contact {
+          text-align: center;
+        }
+        .hero-banner-overlay {
+          padding: 32px 32px;
+        }
+        .hero-banner-title {
+          font-size: clamp(22px, 5vw, 40px);
+        }
+        .slide {
+          flex: 0 0 calc(50% - 10px);
+        }
+        .slide-btn.prev {
+          left: -12px;
+        }
+        .slide-btn.next {
+          right: -12px;
+        }
+      }
+      @media (max-width: 600px) {
+        :root {
+          --section-gap: 64px;
+        }
+        .container {
+          padding: 0 20px;
+        }
+        .details-grid {
+          grid-template-columns: 1fr;
+        }
+        nav .inner {
+          padding: 0 20px;
+        }
+        .form-card {
+          padding: 32px 24px;
+        }
+        .hero-banner-overlay {
+          padding: 24px 20px;
+        }
+        .hero-banner-title {
+          font-size: clamp(20px, 7vw, 34px);
+        }
+        .hero-banner-badges {
+          display: none;
+        }
+        .hero-batch-note {
+          display: none;
+        }
+        .slide {
+          flex: 0 0 calc(100%);
+        }
+        .slide-btn {
+          display: none;
+        }
+        .enroll-inner {
+          gap: 32px;
+        }
+        .gallery-header {
+          padding: 0 20px;
+        }
+      }
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .fade-up {
+        opacity: 0;
+        animation: fadeUp 0.6s ease forwards;
+      }
+      .fd-1 {
+        animation-delay: 0.1s;
+      }
+      .fd-2 {
+        animation-delay: 0.25s;
+      }
+      .fd-3 {
+        animation-delay: 0.4s;
+      }
+      .fd-4 {
+        animation-delay: 0.55s;
+      }
     </style>
   </head>
   <body>
     <nav>
       <div class="inner">
-        <img src="/assests/Snip-Academy-Logo.png" alt="Snip Academy of Hair & Makeup" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
-        <div class="nav-logo-placeholder" style="display:none">SNIP ACADEMY — Replace with Logo</div>
-        <button class="nav-cta" onclick="document.getElementById('enroll').scrollIntoView({behavior:'smooth'})">Enquire Now</button>
+        <img
+          src="/assests/Snip-Academy-Logo.png"
+          alt="Snip Academy of Hair & Makeup"
+          class="nav-logo-img"
+          onerror="
+            this.style.display = 'none';
+            this.nextElementSibling.style.display = 'flex';
+          "
+        />
+        <div class="nav-logo-placeholder" style="display: none">
+          SNIP ACADEMY — Replace with Logo
+        </div>
+        <button
+          class="nav-cta"
+          onclick="
+            document
+              .getElementById('enroll')
+              .scrollIntoView({ behavior: 'smooth' })
+          "
+        >
+          Enquire Now
+        </button>
       </div>
     </nav>
 
     <section class="hero-banner">
-      <img src="assests/Snip_banner.jpeg" alt="Pursue a high paying career in Hairdressing — Snip Academy" class="hero-banner-img"/>
+      <img
+        src="assests/Snip_banner.jpeg"
+        alt="Pursue a high paying career in Hairdressing — Snip Academy"
+        class="hero-banner-img"
+      />
       <div class="hero-banner-overlay">
         <div class="hero-banner-content">
-          <h1 class="hero-banner-title fade-up fd-2">Pursue A High<br/>Paying Career In<br/><em>Hair Dressing</em></h1>
+          <h1 class="hero-banner-title fade-up fd-2">
+            Pursue A High<br />Paying Career In<br /><em>Hair Dressing</em>
+          </h1>
           <div class="hero-banner-badges fade-up fd-3">
             <div class="hero-badge">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
               Certified Course
             </div>
             <div class="hero-badge">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+              </svg>
               Real Client Experience
             </div>
             <div class="hero-badge">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
               Guaranteed Placement
             </div>
           </div>
           <div class="hero-banner-actions fade-up fd-4">
-            <button class="btn-hero" onclick="document.getElementById('enroll').scrollIntoView({behavior:'smooth'})">Enroll Now →</button>
-            <span class="hero-batch-note">Batch starts <strong>20th April 2026</strong> · Limited Seats</span>
+            <button
+              class="btn-hero"
+              onclick="
+                document
+                  .getElementById('enroll')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+            >
+              Enroll Now →
+            </button>
+            <span class="hero-batch-note"
+              >Batch starts <strong>20th April 2026</strong> · Limited
+              Seats</span
+            >
           </div>
         </div>
       </div>
     </section>
 
-    <div style="background:var(--cream);padding:40px 32px;">
-      <div style="max-width:1140px;margin:0 auto;border-left:3px solid var(--brown);padding-left:28px;">
-        <p style="font-family:var(--font);font-size:16px;color:var(--mid);line-height:1.8;max-width:760px;">
-          Join the 6-Month Professional Hair Dresser Program at Snip Academy of Hair & Makeup. Led by Anjali Noronha, an accomplished and highly respected professional in the hair and makeup industry.
+    <div style="background: var(--cream); padding: 40px 32px">
+      <div
+        style="
+          max-width: 1140px;
+          margin: 0 auto;
+          border-left: 3px solid var(--brown);
+          padding-left: 28px;
+        "
+      >
+        <p
+          style="
+            font-family: var(--font);
+            font-size: 16px;
+            color: var(--mid);
+            line-height: 1.8;
+            max-width: 760px;
+          "
+        >
+          Join the 6-Month Professional Hair Dresser Program at Snip Academy of
+          Hair & Makeup. Led by Anjali Noronha, an accomplished and highly
+          respected professional in the hair and makeup industry.
         </p>
-        <p style="font-family:var(--font);font-size:16px;color:var(--mid);line-height:1.8;max-width:760px;margin-top:12px;">
-          This course takes you from a beginner to a working professional with 3 months of training and a guaranteed 3-month internship at Snip, Goa.
+        <p
+          style="
+            font-family: var(--font);
+            font-size: 16px;
+            color: var(--mid);
+            line-height: 1.8;
+            max-width: 760px;
+            margin-top: 12px;
+          "
+        >
+          This course takes you from a beginner to a working professional with 3
+          months of training and a guaranteed 3-month internship at Snip, Goa.
         </p>
       </div>
     </div>
@@ -273,10 +1178,39 @@
             <h2>Why <em>Choose</em> Snip Academy?</h2>
           </div>
           <div class="why-cards">
-            <div class="why-card"><div class="card-num">01</div><h3>Decades of Experience</h3><p>Learn at a brand established in 1999 with over 16,500 sq. ft. of professional salon space.</p></div>
-            <div class="why-card"><div class="card-num">02</div><h3>Mentorship by Anjali Noronha</h3><p>Learn directly from a globally trained director, who holds certification from world-class institutions like Sassoon (LA), La Biosthetique (Canada), and Toni & Guy (London).</p></div>
-            <div class="why-card"><div class="card-num">03</div><h3>Real-World Practice</h3><p>We don't just use mannequins. You will get hands-on experience with real clients in a busy salon environment.</p></div>
-            <div class="why-card"><div class="card-num">04</div><h3>Guaranteed Placement</h3><p>We hire our best students. Complete the course and start your career at one of our branches.</p></div>
+            <div class="why-card">
+              <div class="card-num">01</div>
+              <h3>Decades of Experience</h3>
+              <p>
+                Learn at a brand established in 1999 with over 16,500 sq. ft. of
+                professional salon space.
+              </p>
+            </div>
+            <div class="why-card">
+              <div class="card-num">02</div>
+              <h3>Mentorship by Anjali Noronha</h3>
+              <p>
+                Learn directly from a globally trained director, who holds
+                certification from world-class institutions like Sassoon (LA),
+                La Biosthetique (Canada), and Toni & Guy (London).
+              </p>
+            </div>
+            <div class="why-card">
+              <div class="card-num">03</div>
+              <h3>Real-World Practice</h3>
+              <p>
+                We don't just use mannequins. You will get hands-on experience
+                with real clients in a busy salon environment.
+              </p>
+            </div>
+            <div class="why-card">
+              <div class="card-num">04</div>
+              <h3>Guaranteed Placement</h3>
+              <p>
+                We hire our best students. Complete the course and start your
+                career at one of our branches.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -286,18 +1220,36 @@
       <div class="container">
         <div class="director-grid">
           <div class="director-visual">
-            <img src="assests/anjali2.png" alt="Anjali Noronha" class="director-img">
+            <img
+              src="assests/anjali2.png"
+              alt="Anjali Noronha"
+              class="director-img"
+            />
           </div>
           <div>
             <p class="director-label">Course Director</p>
             <h2 class="director-name">Anjali Noronha</h2>
-            <p>Anjali brings over 25 years of industry expertise to the academy. Her vast training background includes some of the world's most prestigious institutions, such as:</p>
+            <p>
+              Anjali brings over 25 years of industry expertise to the academy.
+              Her vast training background includes some of the world's most
+              prestigious institutions, such as:
+            </p>
             <div class="certs">
-              <div class="cert-item"><span class="cert-dot"></span>Nalini & Yasmin, Mumbai</div>
-              <div class="cert-item"><span class="cert-dot"></span>Sassoon Academy, Los Angeles</div>
-              <div class="cert-item"><span class="cert-dot"></span>SAKS, London</div>
-              <div class="cert-item"><span class="cert-dot"></span>Toni & Guy, London</div>
-              <div class="cert-item"><span class="cert-dot"></span>La Biosthetique, Canada</div>
+              <div class="cert-item">
+                <span class="cert-dot"></span>Nalini & Yasmin, Mumbai
+              </div>
+              <div class="cert-item">
+                <span class="cert-dot"></span>Sassoon Academy, Los Angeles
+              </div>
+              <div class="cert-item">
+                <span class="cert-dot"></span>SAKS, London
+              </div>
+              <div class="cert-item">
+                <span class="cert-dot"></span>Toni & Guy, London
+              </div>
+              <div class="cert-item">
+                <span class="cert-dot"></span>La Biosthetique, Canada
+              </div>
             </div>
           </div>
         </div>
@@ -312,18 +1264,62 @@
         </div>
         <div class="slideshow-wrapper">
           <button class="slide-btn prev" id="slidePrev" aria-label="Previous">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
           </button>
           <div class="slideshow-track-container">
             <div class="slideshow-track" id="slideshowTrack">
-              <div class="slide"><img src="assests/ss1.webp" alt="Portfolio 1" class="slide-img"/></div>
-              <div class="slide"><img src="assests/ss2.webp" alt="Portfolio 2" class="slide-img"/></div>
-              <div class="slide"><img src="assests/ss3.webp" alt="Portfolio 3" class="slide-img"/></div>
-              <div class="slide"><img src="assests/ss4.webp" alt="Portfolio 4" class="slide-img"/></div>
+              <div class="slide">
+                <img
+                  src="assests/ss1.webp"
+                  alt="Portfolio 1"
+                  class="slide-img"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="assests/ss2.webp"
+                  alt="Portfolio 2"
+                  class="slide-img"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="assests/ss3.webp"
+                  alt="Portfolio 3"
+                  class="slide-img"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="assests/ss4.webp"
+                  alt="Portfolio 4"
+                  class="slide-img"
+                />
+              </div>
             </div>
           </div>
           <button class="slide-btn next" id="slideNext" aria-label="Next">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
           </button>
         </div>
         <div class="slide-dots" id="slideDots"></div>
@@ -344,22 +1340,44 @@
             </div>
             <div class="phase-body">
               <ul class="phase-items">
-                <li><strong>Consultation & Styling:</strong> Understanding hair types, client consultations, and basic styling techniques.</li>
-                <li><strong>Women's Haircuts:</strong> Intensive blocks for Long Hair (4 weeks), Mid-length (2 weeks), and Short Haircuts (2 weeks).</li>
-                <li><strong>Men's Haircuts:</strong> Comprehensive training in modern and classic men's grooming.</li>
-                <li><strong>Basic Color Theory:</strong> Mastering the science of color application and theory, with active support of our partner brand, L'Oréal Professionel.</li>
-                <li><strong>Model Practice Workshops:</strong> Dedicated slots for hands-on training to brush up on your interpersonal skills and technique.</li>
+                <li>
+                  <strong>Consultation & Styling:</strong> Understanding hair
+                  types, client consultations, and basic styling techniques.
+                </li>
+                <li>
+                  <strong>Women's Haircuts:</strong> Intensive blocks for Long
+                  Hair (4 weeks), Mid-length (2 weeks), and Short Haircuts (2
+                  weeks).
+                </li>
+                <li>
+                  <strong>Men's Haircuts:</strong> Comprehensive training in
+                  modern and classic men's grooming.
+                </li>
+                <li>
+                  <strong>Basic Color Theory:</strong> Mastering the science of
+                  color application and theory, with active support of our
+                  partner brand, L'Oréal Professionel.
+                </li>
+                <li>
+                  <strong>Model Practice Workshops:</strong> Dedicated slots for
+                  hands-on training to brush up on your interpersonal skills and
+                  technique.
+                </li>
               </ul>
             </div>
           </div>
           <div class="phase">
-            <div class="phase-head" style="background:var(--charcoal)">
+            <div class="phase-head" style="background: var(--charcoal)">
               <div class="ph-tag">Phase 2 · Months 4–6</div>
               <h3>3 Months Internship at Snip</h3>
             </div>
             <div class="phase-body">
               <ul class="phase-items">
-                <li>Move from the classroom to the salon floor. Gain real-world experience working with experienced stylists and actual clients at Snip.</li>
+                <li>
+                  Move from the classroom to the salon floor. Gain real-world
+                  experience working with experienced stylists and actual
+                  clients at Snip.
+                </li>
               </ul>
             </div>
           </div>
@@ -372,28 +1390,164 @@
         <h2>Course Details</h2>
         <div class="details-grid">
           <div class="detail-card">
-            <div class="detail-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><defs><linearGradient id="g1" x1="0" y1="0" x2="24" y2="24"><stop offset="0%" stop-color="#C5A46D"/><stop offset="50%" stop-color="#FFD700"/><stop offset="100%" stop-color="#B8963A"/></linearGradient></defs><path d="M7 2V5M17 2V5M3 9H21M5 5H19C20.1 5 21 5.9 21 7V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V7C3 5.9 3.9 5 5 5Z" stroke="url(#g1)" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <div class="detail-label">Duration</div><div class="detail-value">6 Months</div><div class="detail-sub">5 days per week</div>
+            <div class="detail-icon">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                <defs>
+                  <linearGradient id="g1" x1="0" y1="0" x2="24" y2="24">
+                    <stop offset="0%" stop-color="#C5A46D" />
+                    <stop offset="50%" stop-color="#FFD700" />
+                    <stop offset="100%" stop-color="#B8963A" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M7 2V5M17 2V5M3 9H21M5 5H19C20.1 5 21 5.9 21 7V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V7C3 5.9 3.9 5 5 5Z"
+                  stroke="url(#g1)"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div class="detail-label">Duration</div>
+            <div class="detail-value">6 Months</div>
+            <div class="detail-sub">5 days per week</div>
           </div>
           <div class="detail-card">
-            <div class="detail-icon"><svg width="30" height="30" fill="none" viewBox="0 0 24 24"><defs><linearGradient id="g2" x1="0" y1="0" x2="24" y2="24"><stop offset="0%" stop-color="#C5A46D"/><stop offset="50%" stop-color="#FFD700"/><stop offset="100%" stop-color="#B8963A"/></linearGradient></defs><circle cx="12" cy="12" r="9" stroke="url(#g2)" stroke-width="2"/><path d="M12 7V12L15 15" stroke="url(#g2)" stroke-width="2"/></svg></div>
-            <div class="detail-label">Timings</div><div class="detail-value">10 AM – 2 PM</div><div class="detail-sub">4+ hours per day</div>
+            <div class="detail-icon">
+              <svg width="30" height="30" fill="none" viewBox="0 0 24 24">
+                <defs>
+                  <linearGradient id="g2" x1="0" y1="0" x2="24" y2="24">
+                    <stop offset="0%" stop-color="#C5A46D" />
+                    <stop offset="50%" stop-color="#FFD700" />
+                    <stop offset="100%" stop-color="#B8963A" />
+                  </linearGradient>
+                </defs>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="9"
+                  stroke="url(#g2)"
+                  stroke-width="2"
+                />
+                <path d="M12 7V12L15 15" stroke="url(#g2)" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="detail-label">Timings</div>
+            <div class="detail-value">10 AM – 2 PM</div>
+            <div class="detail-sub">4+ hours per day</div>
           </div>
           <div class="detail-card">
-            <div class="detail-icon"><svg width="30" height="30" fill="none" viewBox="0 0 24 24"><defs><linearGradient id="g3" x1="0" y1="0" x2="24" y2="24"><stop offset="0%" stop-color="#C5A46D"/><stop offset="50%" stop-color="#FFD700"/><stop offset="100%" stop-color="#B8963A"/></linearGradient></defs><rect x="2" y="6" width="20" height="12" rx="2" stroke="url(#g3)" stroke-width="2"/><path d="M2 10H22" stroke="url(#g3)" stroke-width="2"/><path d="M8 12H14M8 9H16M10 12C10 14 12 15 14 16" stroke="url(#g3)" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <div class="detail-label">Course Fee</div><div class="detail-value">₹1,50,000</div><div class="detail-sub">(Includes 3 months training + 3 months internship).</div>
+            <div class="detail-icon">
+              <svg width="30" height="30" fill="none" viewBox="0 0 24 24">
+                <defs>
+                  <linearGradient id="g3" x1="0" y1="0" x2="24" y2="24">
+                    <stop offset="0%" stop-color="#C5A46D" />
+                    <stop offset="50%" stop-color="#FFD700" />
+                    <stop offset="100%" stop-color="#B8963A" />
+                  </linearGradient>
+                </defs>
+                <rect
+                  x="2"
+                  y="6"
+                  width="20"
+                  height="12"
+                  rx="2"
+                  stroke="url(#g3)"
+                  stroke-width="2"
+                />
+                <path d="M2 10H22" stroke="url(#g3)" stroke-width="2" />
+                <path
+                  d="M8 12H14M8 9H16M10 12C10 14 12 15 14 16"
+                  stroke="url(#g3)"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div class="detail-label">Course Fee</div>
+            <div class="detail-value">₹1,50,000</div>
+            <div class="detail-sub">
+              (Includes 3 months training + 3 months internship).
+            </div>
           </div>
           <div class="detail-card">
-            <div class="detail-icon"><svg width="30" height="30" fill="none" viewBox="0 0 24 24"><defs><linearGradient id="g4" x1="0" y1="0" x2="24" y2="24"><stop offset="0%" stop-color="#C5A46D"/><stop offset="50%" stop-color="#FFD700"/><stop offset="100%" stop-color="#B8963A"/></linearGradient></defs><rect x="2" y="6" width="20" height="12" rx="2" stroke="url(#g4)" stroke-width="2"/><path d="M2 10H22" stroke="url(#g4)" stroke-width="2"/><path d="M8 12H14M8 9H16M10 12C10 14 12 15 14 16" stroke="url(#g4)" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <div class="detail-label">Payment</div><div class="detail-value">Flexible payment plans are available.</div>
+            <div class="detail-icon">
+              <svg width="30" height="30" fill="none" viewBox="0 0 24 24">
+                <defs>
+                  <linearGradient id="g4" x1="0" y1="0" x2="24" y2="24">
+                    <stop offset="0%" stop-color="#C5A46D" />
+                    <stop offset="50%" stop-color="#FFD700" />
+                    <stop offset="100%" stop-color="#B8963A" />
+                  </linearGradient>
+                </defs>
+                <rect
+                  x="2"
+                  y="6"
+                  width="20"
+                  height="12"
+                  rx="2"
+                  stroke="url(#g4)"
+                  stroke-width="2"
+                />
+                <path d="M2 10H22" stroke="url(#g4)" stroke-width="2" />
+                <path
+                  d="M8 12H14M8 9H16M10 12C10 14 12 15 14 16"
+                  stroke="url(#g4)"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div class="detail-label">Payment</div>
+            <div class="detail-value">
+              Flexible payment plans are available.
+            </div>
           </div>
           <div class="detail-card">
-            <div class="detail-icon"><svg width="30" height="30" fill="none" viewBox="0 0 24 24"><defs><linearGradient id="g5" x1="0" y1="0" x2="24" y2="24"><stop offset="0%" stop-color="#C5A46D"/><stop offset="50%" stop-color="#FFD700"/><stop offset="100%" stop-color="#B8963A"/></linearGradient></defs><path d="M9 11L12 14L20 6" stroke="url(#g5)" stroke-width="2"/><path d="M20 12V19H4V5H14" stroke="url(#g5)" stroke-width="2"/></svg></div>
-            <div class="detail-label">Requirement</div><div class="detail-value">No prior experience needed. We teach you everything from scratch.</div>
+            <div class="detail-icon">
+              <svg width="30" height="30" fill="none" viewBox="0 0 24 24">
+                <defs>
+                  <linearGradient id="g5" x1="0" y1="0" x2="24" y2="24">
+                    <stop offset="0%" stop-color="#C5A46D" />
+                    <stop offset="50%" stop-color="#FFD700" />
+                    <stop offset="100%" stop-color="#B8963A" />
+                  </linearGradient>
+                </defs>
+                <path d="M9 11L12 14L20 6" stroke="url(#g5)" stroke-width="2" />
+                <path d="M20 12V19H4V5H14" stroke="url(#g5)" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="detail-label">Requirement</div>
+            <div class="detail-value">
+              No prior experience needed. We teach you everything from scratch.
+            </div>
           </div>
           <div class="detail-card">
-            <div class="detail-icon"><svg width="30" height="30" fill="none" viewBox="0 0 24 24"><defs><linearGradient id="g6" x1="0" y1="0" x2="24" y2="24"><stop offset="0%" stop-color="#C5A46D"/><stop offset="50%" stop-color="#FFD700"/><stop offset="100%" stop-color="#B8963A"/></linearGradient></defs><path d="M3 7L12 3L21 7L12 11L3 7Z" stroke="url(#g6)" stroke-width="2"/><path d="M6 9V14C6 16 9 18 12 18C15 18 18 16 18 14V9" stroke="url(#g6)" stroke-width="2"/></svg></div>
-            <div class="detail-label">Certification</div><div class="detail-value">You will receive a professional hairdresser certificate from Snip Academy of Hair and Makeup.</div>
+            <div class="detail-icon">
+              <svg width="30" height="30" fill="none" viewBox="0 0 24 24">
+                <defs>
+                  <linearGradient id="g6" x1="0" y1="0" x2="24" y2="24">
+                    <stop offset="0%" stop-color="#C5A46D" />
+                    <stop offset="50%" stop-color="#FFD700" />
+                    <stop offset="100%" stop-color="#B8963A" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M3 7L12 3L21 7L12 11L3 7Z"
+                  stroke="url(#g6)"
+                  stroke-width="2"
+                />
+                <path
+                  d="M6 9V14C6 16 9 18 12 18C15 18 18 16 18 14V9"
+                  stroke="url(#g6)"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <div class="detail-label">Certification</div>
+            <div class="detail-value">
+              You will receive a professional hairdresser certificate from Snip
+              Academy of Hair and Makeup.
+            </div>
           </div>
         </div>
       </div>
@@ -402,16 +1556,121 @@
     <section class="faq">
       <div class="container">
         <div class="faq-grid">
-          <div class="faq-left"><h2>Frequently Asked <em>Questions</em></h2></div>
+          <div class="faq-left">
+            <h2>Frequently Asked <em>Questions</em></h2>
+          </div>
           <div class="faq-items">
-            <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Will I receive a certification upon completion of the course?<span class="faq-icon">+</span></div><div class="faq-a">Yes. Upon successfully completing your 3-month training and the 3-month internship, you will receive a professional certificate from Snip Academy of Hair and Makeup. This is a recognized credential that validates your expertise and helps you start your career as a qualified professional.</div></div>
-            <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I work as a hairstylist after completing the course?<span class="faq-icon">+</span></div><div class="faq-a">Absolutely. After finishing the program, you will be fully equipped to pursue several career paths, including:<ul><li>Joining the professional styling team at Snip</li><li>Working in high-end salons across the country</li><li>Starting your own independent salon or studio</li><li>Working in the hair department for film, television, and advertising</li><li>Designing looks for fashion editorials and magazine features</li></ul></div></div>
-            <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do I need prior experience to join?<span class="faq-icon">+</span></div><div class="faq-a">No. This course is specifically designed for beginners. We take you through everything from the very basics of hair science and client consultations to advanced cutting and coloring, ensuring you build a strong professional foundation from scratch.</div></div>
-            <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How is the course structured?<span class="faq-icon">+</span></div><div class="faq-a">The structure of each week is highly practical. You will move from theory into intensive blocks for women's and men's haircuts, color and chemical services like straightening. The goal is to ensure you spend as much time as possible practicing techniques to prepare you for the salon floor.</div></div>
-            <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the "Model Practice" part of the course?<span class="faq-icon">+</span></div><div class="faq-a">Practical training is a core part of the Snip Academy experience. You will have dedicated weeks to practice on real models provided by the academy. This gives you hands-on training and the chance to brush up on your interpersonal skills by talking to and consulting with people you aren't familiar with.</div></div>
-            <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is the job placement really guaranteed?<span class="faq-icon">+</span></div><div class="faq-a">Yes. We offer guaranteed placements at Snip for deserving candidates who show dedication, professional conduct, and skill during their 3 months of training and 3-month internship.</div></div>
-            <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the total fee for the course?<span class="faq-icon">+</span></div><div class="faq-a">The certified course fee is ₹1,50,000. This covers your 3 months of intensive training and your 3-month internship at Snip. We also offer flexible payment plans to help manage the investment.</div></div>
-            <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How can I enroll?<span class="faq-icon">+</span></div><div class="faq-a">The best way to start is to schedule a consultation. Share your details in the form at the end and speak with our team about upcoming batch dates and the enrollment process.</div></div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                Will I receive a certification upon completion of the
+                course?<span class="faq-icon">+</span>
+              </div>
+              <div class="faq-a">
+                Yes. Upon successfully completing your 3-month training and the
+                3-month internship, you will receive a professional certificate
+                from Snip Academy of Hair and Makeup. This is a recognized
+                credential that validates your expertise and helps you start
+                your career as a qualified professional.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                Can I work as a hairstylist after completing the course?<span
+                  class="faq-icon"
+                  >+</span
+                >
+              </div>
+              <div class="faq-a">
+                Absolutely. After finishing the program, you will be fully
+                equipped to pursue several career paths, including:
+                <ul>
+                  <li>Joining the professional styling team at Snip</li>
+                  <li>Working in high-end salons across the country</li>
+                  <li>Starting your own independent salon or studio</li>
+                  <li>
+                    Working in the hair department for film, television, and
+                    advertising
+                  </li>
+                  <li>
+                    Designing looks for fashion editorials and magazine features
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                Do I need prior experience to join?<span class="faq-icon"
+                  >+</span
+                >
+              </div>
+              <div class="faq-a">
+                No. This course is specifically designed for beginners. We take
+                you through everything from the very basics of hair science and
+                client consultations to advanced cutting and coloring, ensuring
+                you build a strong professional foundation from scratch.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                How is the course structured?<span class="faq-icon">+</span>
+              </div>
+              <div class="faq-a">
+                The structure of each week is highly practical. You will move
+                from theory into intensive blocks for women's and men's
+                haircuts, color and chemical services like straightening. The
+                goal is to ensure you spend as much time as possible practicing
+                techniques to prepare you for the salon floor.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                What is the "Model Practice" part of the course?<span
+                  class="faq-icon"
+                  >+</span
+                >
+              </div>
+              <div class="faq-a">
+                Practical training is a core part of the Snip Academy
+                experience. You will have dedicated weeks to practice on real
+                models provided by the academy. This gives you hands-on training
+                and the chance to brush up on your interpersonal skills by
+                talking to and consulting with people you aren't familiar with.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                Is the job placement really guaranteed?<span class="faq-icon"
+                  >+</span
+                >
+              </div>
+              <div class="faq-a">
+                Yes. We offer guaranteed placements at Snip for deserving
+                candidates who show dedication, professional conduct, and skill
+                during their 3 months of training and 3-month internship.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                What is the total fee for the course?<span class="faq-icon"
+                  >+</span
+                >
+              </div>
+              <div class="faq-a">
+                The certified course fee is ₹1,50,000. This covers your 3 months
+                of intensive training and your 3-month internship at Snip. We
+                also offer flexible payment plans to help manage the investment.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                How can I enroll?<span class="faq-icon">+</span>
+              </div>
+              <div class="faq-a">
+                The best way to start is to schedule a consultation. Share your
+                details in the form at the end and speak with our team about
+                upcoming batch dates and the enrollment process.
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -425,13 +1684,67 @@
             <h3>Get In Touch</h3>
             <p class="form-sub">We'll get back to you within 24 hours.</p>
             <div id="enquiryForm">
-              <div class="field" id="f-name"><label for="inp-name">Full Name</label><input type="text" id="inp-name" placeholder="Your full name" autocomplete="name"/><span class="field-err">Please enter your full name.</span></div>
-              <div class="field" id="f-phone"><label for="inp-phone">Phone Number</label><input type="tel" id="inp-phone" placeholder="+91 98765 43210" autocomplete="tel"/><span class="field-err">Please enter a valid 10-digit phone number.</span></div>
-              <div class="field" id="f-email"><label for="inp-email">Email Address</label><input type="email" id="inp-email" placeholder="you@email.com" autocomplete="email"/><span class="field-err">Please enter a valid email address.</span></div>
-              <div class="field" id="f-city"><label for="inp-city">City</label><input type="text" id="inp-city" placeholder="Your city"/><span class="field-err">Please enter your city.</span></div>
-              <div class="field" id="f-source"><label for="inp-source">How did you hear about us?</label><div class="select-wrap"><select id="inp-source"><option value="">— Select an option —</option><option value="Instagram">Instagram</option><option value="Facebook">Facebook</option><option value="Google">Google Search</option><option value="Friend/Family">Friend / Family</option><option value="Walk-in">Walk-in / Direct</option><option value="Other">Other</option></select></div><span class="field-err">Please select an option.</span></div>
-              <button class="submit-btn" id="submitBtn" onclick="submitForm()">Submit Enquiry →</button>
-              <p class="form-privacy">Your details are private and will only be used to contact you about the programme.</p>
+              <div class="field" id="f-name">
+                <label for="inp-name">Full Name</label
+                ><input
+                  type="text"
+                  id="inp-name"
+                  placeholder="Your full name"
+                  autocomplete="name"
+                /><span class="field-err">Please enter your full name.</span>
+              </div>
+              <div class="field" id="f-phone">
+                <label for="inp-phone">Phone Number</label
+                ><input
+                  type="tel"
+                  id="inp-phone"
+                  placeholder="+91 98765 43210"
+                  autocomplete="tel"
+                /><span class="field-err"
+                  >Please enter a valid 10-digit phone number.</span
+                >
+              </div>
+              <div class="field" id="f-email">
+                <label for="inp-email">Email Address</label
+                ><input
+                  type="email"
+                  id="inp-email"
+                  placeholder="you@email.com"
+                  autocomplete="email"
+                /><span class="field-err"
+                  >Please enter a valid email address.</span
+                >
+              </div>
+              <div class="field" id="f-city">
+                <label for="inp-city">City</label
+                ><input
+                  type="text"
+                  id="inp-city"
+                  placeholder="Your city"
+                /><span class="field-err">Please enter your city.</span>
+              </div>
+              <div class="field" id="f-source">
+                <label for="inp-source">How did you hear about us?</label>
+                <div class="select-wrap">
+                  <select id="inp-source">
+                    <option value="">— Select an option —</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Google">Google Search</option>
+                    <option value="Friend/Family">Friend / Family</option>
+                    <option value="Walk-in">Walk-in / Direct</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <span class="field-err">Please select an option.</span>
+              </div>
+              <button class="submit-btn" id="submitBtn" onclick="submitForm()">
+                Submit Enquiry →
+              </button>
+              <p class="form-privacy">
+                Your details are private and will only be used to contact you
+                about the programme.
+              </p>
             </div>
             <div class="form-success" id="formSuccess">
               <div class="s-icon">✅</div>
@@ -445,8 +1758,18 @@
 
     <!-- FOOTER — phone only, email removed -->
     <footer>
-      <img src="assests/Snip-Academy-Logo.png" alt="Snip Academy" class="footer-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
-      <div class="footer-logo-placeholder" style="display:none">SNIP ACADEMY — Replace with Logo</div>
+      <img
+        src="assests/Snip-Academy-Logo.png"
+        alt="Snip Academy"
+        class="footer-logo-img"
+        onerror="
+          this.style.display = 'none';
+          this.nextElementSibling.style.display = 'flex';
+        "
+      />
+      <div class="footer-logo-placeholder" style="display: none">
+        SNIP ACADEMY — Replace with Logo
+      </div>
       <p>© 2026 Snip Academy. All rights reserved.</p>
       <div class="footer-contact">
         <span>📞 +91 9226077417</span>
@@ -457,7 +1780,9 @@
       function toggleFaq(el) {
         const item = el.parentElement;
         const isOpen = item.classList.contains("open");
-        document.querySelectorAll(".faq-item").forEach(i => i.classList.remove("open"));
+        document
+          .querySelectorAll(".faq-item")
+          .forEach((i) => i.classList.remove("open"));
         if (!isOpen) item.classList.add("open");
       }
 
@@ -467,12 +1792,18 @@
         const nextBtn = document.getElementById("slideNext");
         const dotsEl = document.getElementById("slideDots");
         const slides = Array.from(track.querySelectorAll(".slide"));
-        let current = 0, visibleCount = 4;
+        let current = 0,
+          visibleCount = 4;
         function getVisible() {
           const w = window.innerWidth;
-          if (w <= 600) return 1; if (w <= 900) return 2; if (w <= 1000) return 3; return 4;
+          if (w <= 600) return 1;
+          if (w <= 900) return 2;
+          if (w <= 1000) return 3;
+          return 4;
         }
-        function maxIndex() { return Math.max(0, slides.length - visibleCount); }
+        function maxIndex() {
+          return Math.max(0, slides.length - visibleCount);
+        }
         function buildDots() {
           dotsEl.innerHTML = "";
           for (let i = 0; i <= maxIndex(); i++) {
@@ -492,62 +1823,107 @@
         }
         prevBtn.addEventListener("click", () => goTo(current - 1));
         nextBtn.addEventListener("click", () => goTo(current + 1));
-        let autoTimer = setInterval(() => goTo(current >= maxIndex() ? 0 : current + 1), 4000);
-        [prevBtn, nextBtn].forEach(b => b.addEventListener("click", () => {
-          clearInterval(autoTimer);
-          autoTimer = setInterval(() => goTo(current >= maxIndex() ? 0 : current + 1), 4000);
-        }));
+        let autoTimer = setInterval(
+          () => goTo(current >= maxIndex() ? 0 : current + 1),
+          4000,
+        );
+        [prevBtn, nextBtn].forEach((b) =>
+          b.addEventListener("click", () => {
+            clearInterval(autoTimer);
+            autoTimer = setInterval(
+              () => goTo(current >= maxIndex() ? 0 : current + 1),
+              4000,
+            );
+          }),
+        );
         let touchStartX = 0;
-        track.addEventListener("touchstart", e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-        track.addEventListener("touchend", e => { const diff = touchStartX - e.changedTouches[0].clientX; if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1); });
+        track.addEventListener(
+          "touchstart",
+          (e) => {
+            touchStartX = e.touches[0].clientX;
+          },
+          { passive: true },
+        );
+        track.addEventListener("touchend", (e) => {
+          const diff = touchStartX - e.changedTouches[0].clientX;
+          if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
+        });
         window.addEventListener("resize", () => goTo(0));
         goTo(0);
       })();
 
       // 👇 Replace with your Google Apps Script Web App URL (see setup steps below)
-      const SHEET_URL = "https://script.google.com/macros/s/AKfycbwZl8TiB9qCypS2bjGvMN-l5z5w-H8d5u4vEdjhcR8Jh2_p-SpBlO6VLE1FIAC5npcQ/exec";
+      const SHEET_URL =
+        "https://script.google.com/macros/s/AKfycbwZl8TiB9qCypS2bjGvMN-l5z5w-H8d5u4vEdjhcR8Jh2_p-SpBlO6VLE1FIAC5npcQ/exec";
 
       function validate() {
         let valid = true;
         const checks = [
-          { id: "inp-name", fid: "f-name", test: v => v.trim().length >= 2 },
-          { id: "inp-phone", fid: "f-phone", test: v => v.replace(/\D/g,"").length >= 10 },
-          { id: "inp-email", fid: "f-email", test: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) },
-          { id: "inp-city", fid: "f-city", test: v => v.trim().length > 0 },
-          { id: "inp-source", fid: "f-source", test: v => v !== "" },
+          { id: "inp-name", fid: "f-name", test: (v) => v.trim().length >= 2 },
+          {
+            id: "inp-phone",
+            fid: "f-phone",
+            test: (v) => v.replace(/\D/g, "").length >= 10,
+          },
+          {
+            id: "inp-email",
+            fid: "f-email",
+            test: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
+          },
+          { id: "inp-city", fid: "f-city", test: (v) => v.trim().length > 0 },
+          { id: "inp-source", fid: "f-source", test: (v) => v !== "" },
         ];
         checks.forEach(({ id, fid, test }) => {
           const el = document.getElementById(id);
           const f = document.getElementById(fid);
-          if (!test(el.value)) { f.classList.add("error"); valid = false; } else { f.classList.remove("error"); }
+          if (!test(el.value)) {
+            f.classList.add("error");
+            valid = false;
+          } else {
+            f.classList.remove("error");
+          }
         });
         return valid;
       }
 
-      ["inp-name","inp-phone","inp-email","inp-city","inp-source"].forEach(id => {
-        const el = document.getElementById(id);
-        el.addEventListener("blur", validate);
-        el.addEventListener("input", () => { const f = el.closest(".field"); if (f && f.classList.contains("error")) validate(); });
-      });
+      ["inp-name", "inp-phone", "inp-email", "inp-city", "inp-source"].forEach(
+        (id) => {
+          const el = document.getElementById(id);
+          el.addEventListener("blur", validate);
+          el.addEventListener("input", () => {
+            const f = el.closest(".field");
+            if (f && f.classList.contains("error")) validate();
+          });
+        },
+      );
 
       async function submitForm() {
         if (!validate()) return;
         const btn = document.getElementById("submitBtn");
-        btn.disabled = true; btn.textContent = "Submitting…";
+        btn.disabled = true;
+        btn.textContent = "Submitting…";
         const payload = {
           name: document.getElementById("inp-name").value.trim(),
           phone: document.getElementById("inp-phone").value.trim(),
           email: document.getElementById("inp-email").value.trim(),
           city: document.getElementById("inp-city").value.trim(),
           source: document.getElementById("inp-source").value,
-          timestamp: new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
+          timestamp: new Date().toLocaleString("en-IN", {
+            timeZone: "Asia/Kolkata",
+          }),
         };
         try {
-          await fetch(SHEET_URL, { method: "POST", mode: "no-cors", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+          await fetch(SHEET_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
           document.getElementById("enquiryForm").style.display = "none";
           document.getElementById("formSuccess").style.display = "block";
         } catch (err) {
-          btn.disabled = false; btn.textContent = "Submit Enquiry →";
+          btn.disabled = false;
+          btn.textContent = "Submit Enquiry →";
           alert("Something went wrong. Please try again or call us directly.");
         }
       }
